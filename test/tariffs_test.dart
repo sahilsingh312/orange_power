@@ -58,7 +58,7 @@ void main() {
   tariffViewModel.tariffApi = MockTariffApi();
 
   group('Given Tariffs should load', () {
-    test('Page should load a list of products from firebase', () async {
+    test('Get the cheapest tariff and the cheapest consecutive 4 hour block', () async {
       await tariffViewModel.getTariffs();
       tariffViewModel.getCheapestTariff();
       tariffViewModel.getCheapestTariffBlock();
